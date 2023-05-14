@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     connectors: [
       new MetaMaskConnector({ chains }),
     ],
+    
   });
 
   return (

@@ -58,6 +58,7 @@ const Home: NextPage = () => {
     args: [message, name],
     value: parseEther("0.01") as any,
   });
+
   const { data, write } = useContractWrite(config);
   const { isLoading } = useWaitForTransaction({
     hash: data?.hash,
