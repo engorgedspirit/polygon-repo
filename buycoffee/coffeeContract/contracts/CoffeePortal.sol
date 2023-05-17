@@ -37,9 +37,9 @@ contract CoffeePortal {
         string memory _message,
         string memory _name
     ) payable public {
-        require(msg.value == 0.01 ether, "You need to pay 0.01 ETH");
+        require(msg.value == 0.01 ether, "You need to pay 0.01 ETH"); // inbuilt asserstion to go in next step.
 
-        totalCoffee += 1;
+         totalCoffee += 1; // no of transactions
         coffee.push(Coffee(msg.sender, _message, _name, block.timestamp));
 
         (bool success,) = owner.call{value: msg.value}("");
